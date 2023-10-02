@@ -1,3 +1,4 @@
 numpy==1.26.0
 scikit-learn==1.3.1
 spacy==3.6.1
+metaphor-python==0.1.16
