@@ -4,11 +4,15 @@ import spacy
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
 
-nlp = spacy.load("en_core_web_sm")
-
-import en_core_web_sm
-
-nlp = en_core_web_sm.load()
+try:
+    nlp = spacy.load("en_core_web_sm")
+    
+    import en_core_web_sm
+    
+    nlp = en_core_web_sm.load()
+except:
+    print("There was some error with loading the spacy model. Run the following command")
+    print("python -m spacy download en_core_web_sm")
 
 reference_phrases = [
     "Here are the",
